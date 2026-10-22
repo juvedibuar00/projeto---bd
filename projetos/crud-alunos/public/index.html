@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro de Alunos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Cadastro de Alunos</h1>
+      <p>Gerencie os alunos cadastrados na escola.</p>
+    </header>
+
+    <section class="card">
+      <h2>Novo aluno</h2>
+
+      <form id="form">
+        <div class="campo">
+          <label for="nome">Nome completo</label>
+          <input id="nome" name="nome"
+                 placeholder="Digite o nome" required>
+        </div>
+
+        <div class="campo">
+          <label for="matricula">Matrícula</label>
+          <input id="matricula" name="matricula"
+                 placeholder="Digite a matrícula" required>
+        </div>
+
+        <div class="campo">
+          <label for="login">Login</label>
+          <input id="login" name="login"
+                 placeholder="Digite o login" required>
+        </div>
+
+        <button type="submit" id="btnCadastrar">
+          Cadastrar aluno
+        </button>
+      </form>
+
+      <p id="mensagem" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h2>Alunos cadastrados</h2>
+
+      <div class="tabela-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Matrícula</th>
+              <th>Login</th>
+            </tr>
+          </thead>
+          <tbody id="lista">
+            <tr>
+              <td colspan="4">Carregando alunos...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
